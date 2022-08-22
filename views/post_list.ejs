@@ -10,7 +10,13 @@
                         <h3><%= post.postedBy.username %></h3> 
                         <img src="<%= post.imageUrl %>" alt="Image loading" width = "200"/>
                         
-                        <p>Likes <%=post.likedBy.length%> Dislikes <%=post.dislikedBy.length%></p>
+                        <form method="post" action="/posts/<%=post.id %>/like/">
+                        <button>Likes </button>
+                        </form>
+                        
+                        
+                        
+                        <%=post.likedBy.length%>  <button>Dislikes</button>  <%=post.dislikedBy.length%></p>
 
                         <p>Posted at: <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %></p> 
                         <p><%= post.message %></p> 
