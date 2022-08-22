@@ -4,14 +4,19 @@
 
         <body>
             <h1>Posts</h1>
-            <ol>
+            <ul>
                 <% postList.results.forEach(function(post) {%>
                     <li>
-                        <h2><%= post.postedBy.userName %></h2>
-                        <%= post.userId %> - <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %> - <%= post.imageUrl %>
+                        <h3><%= post.postedBy.username %></h3> 
+                        <img src="<%= post.imageUrl %>" alt="Image loading" width = "200"/>
+                        
+                        <p>Likes <%=post.likedBy.length%> Dislikes <%=post.dislikedBy.length%></p>
+
+                        <p>Posted at: <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %></p> 
+                        <p><%= post.message %></p> 
                     </li>
                     <% }); %>
-            </ol>
+            </ul>
         </body>
         <%- include('_footer') -%>
 
