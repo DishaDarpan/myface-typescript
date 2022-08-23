@@ -5,30 +5,33 @@
         <body>
             <h1 class="headings">Posts</h1>
             <ul>
+                <div class="container2">
                 <% postList.results.forEach(function(post) {%>
                     <li>
                         <h3>
                             <%= post.postedBy.username %>
                         </h3>
                         <img src="<%= post.imageUrl %>" alt="Image loading"  />
-
+                        <div class="container1">
                         <form method="post" action="/posts/<%=post.id %>/like/">
                             <button>Likes </button>
                         </form>
                         <form method="post" action="/posts/<%=post.id %>/dislike/">
                             <button>Dislike </button>
                         </form>
-                        <p>Liked by <%=post.likedBy.length%> Disliked by <%=post.dislikedBy.length%>
+                    </div>
+                        <p>Liked by<span class = "count"> <%=post.likedBy.length%></span> Disliked by <span class = "count"><%=post.dislikedBy.length%></span>
                         </p>
 
 
-                        <p>Posted at: <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
+                        <p class = "post">Posted at: <span class = "count"><%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %></span>
                         </p>
-                        <p>
+                        <p id = "message">
                             <%= post.message %>
                         </p>
                     </li>
                     <% }); %>
+                </div>
             </ul>
         </body>
         <%- include('_footer') -%>
