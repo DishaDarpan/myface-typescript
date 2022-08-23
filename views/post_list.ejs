@@ -3,14 +3,14 @@
     <%- include('_header') -%>
 
         <body>
-            <h1>Posts</h1>
+            <h1 class="headings">Posts</h1>
             <ul>
                 <% postList.results.forEach(function(post) {%>
                     <li>
                         <h3>
                             <%= post.postedBy.username %>
                         </h3>
-                        <img src="<%= post.imageUrl %>" alt="Image loading" width="200" />
+                        <img src="<%= post.imageUrl %>" alt="Image loading"  />
 
                         <form method="post" action="/posts/<%=post.id %>/like/">
                             <button>Likes </button>
