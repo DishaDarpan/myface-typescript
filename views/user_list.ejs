@@ -8,7 +8,7 @@
     <% results.forEach(function(user) {%>
         <li>
             <h3><%= user.name %></h3> 
-            <a href="<%=user.coverImageUrl%>"><%= user.username %></a>
+            <a href="/users/:userId"><%= user.username %></a>
             <p>E-mail id: <%= user.email %></p>
         </li>
         
