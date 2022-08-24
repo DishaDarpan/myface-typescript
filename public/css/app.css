@@ -30,7 +30,7 @@ a{
 }
 
 
-img{
+postImage{
     width: 250px;
     background: rgb(242, 228, 249);
     padding: 10px ;
@@ -110,26 +110,38 @@ nav{
     background-color:rgb(16, 2, 44);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 1mm;
+    position:relative;
+
 }
 #profImage{
     
     border-radius: 200px;
-    position:relative;
+    position:absolute;
+    top:350px;
+    left:250px;
 }
 #covImage{
-    /* height: 800px;
-    border-radius: 50px; */
-    position:absolute;
-    top:300px;
-    right:0;
+   
+    display: block;
+    width: 80%;
+    align-self: center;
+    
     
 }
 .container4{
-    display:block;
+    display:flex;
+    flex-direction: column;
     width:100%;
 }
 .container5{
-    display:block;
-    width:50%;
-    
+    margin-top:175px;
+    display:flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: space-around;
+}
+.userimage{
+   
+    padding : 2px;
+   
 }

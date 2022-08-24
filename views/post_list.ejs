@@ -11,7 +11,7 @@
                         <h3>
                             <%= post.postedBy.username %>
                         </h3>
-                        <img src="<%= post.imageUrl %>" alt="Image loading"  />
+                        <img id="postImage" src="<%= post.imageUrl %>" alt="Image loading"  />
                         <div class="container1">
                         <form method="post" action="/posts/<%=post.id %>/like/">
                             <button>Likes </button>

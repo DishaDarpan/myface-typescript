@@ -12,17 +12,25 @@
             </nav>
             
             <h1>
-                <%= name %>
+                <%= user.name %>
             </h1>
             <div class="container4">
-            <img id ="covImage" src="<%=coverImageUrl%>" width="80%"/>
+            <img id ="covImage" src="<%=user.coverImageUrl%>"/>
         
-            <img id ="profImage" src="<%= profileImageUrl %>" />
+            <img id ="profImage" src="<%= user.profileImageUrl %>" />
             </div>
             <div class="container5">
-                <img src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" /> 
-                <img src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" /> 
-                <img src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" /> 
+                <% user.posts.forEach(function(post){ %>
+                    <img src="<%=post.imageUrl %>"/>
+                    <%=post.message %>
+                    <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
+
+                   
+               <% }); %>
+
+                <!-- // <img class="userimage"src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" width="300"/> 
+                // <img class="userimage"src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" width="300"/> 
+                // <img class="userimage"src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" width="300"/>  -->
                        </div>
             
         </body>
