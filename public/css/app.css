@@ -2,6 +2,14 @@
 .headings{
     color: rgba(197, 38, 38, 0.716);
 }
+h1{
+    margin-top: 50px;;
+    color:white;
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+}
+
 h3{
     color:brown;
 }
@@ -139,9 +147,22 @@ nav{
     flex-wrap: wrap;
     align-self: center;
     justify-content: space-around;
+    color:white;
 }
+
 .userimage{
    
     padding : 2px;
+    width:200px;
+    height:200px;
    
+}
+.sub-container5{
+    
+    display:flex;
+    
+    flex-wrap: wrap;
+    
+    
+    
 }
