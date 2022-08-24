@@ -2,8 +2,8 @@
 <%- include('_head') -%>
     <!-- <%- include('_header') -%> -->
 
-        <body class = "user">
-            <nav>
+        <body class="user">
+            <nav id="nav-link">
                 <a class="link2" href="">My Face</a>
                 <a class="link2" href="">Home</a>
                 <a class="link2" href="/posts">Posts</a>
@@ -12,17 +12,19 @@
             </nav>
             
             <h1>
-                <%= user.name %>
+                <%= name %>
             </h1>
-            <figure>
-                <%=user.coverImageUrl%>
-            </figure>
-            <figure><%=user.profileImageUrl%></figure>
-            <div>
-            <img src = "https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501__480.jpg" alt = "Loading....">
-            <img src = "https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501__480.jpg" alt = "Loading....">
-            <img src = "https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501__480.jpg" alt = "Loading....">
-        </div>
+            <div class="container4">
+            <img id ="covImage" src="<%=coverImageUrl%>" width="80%"/>
+        
+            <img id ="profImage" src="<%= profileImageUrl %>" />
+            </div>
+            <div class="container5">
+                <img src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" /> 
+                <img src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" /> 
+                <img src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__480.png" /> 
+                       </div>
+            
         </body>
         <%- include('_footer') -%>
 
