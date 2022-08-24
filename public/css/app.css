@@ -55,10 +55,7 @@ img{
     font-family: 'Courier New', Courier, monospace;
     color:rgb(222, 166, 14);
 }
-header{
-    position:sticky;
-    top:0px;
-}
+
 nav{
     display:flex;
     justify-content: space-around;
@@ -66,7 +63,10 @@ nav{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(73, 3, 86);
     padding:10px;
-    border-radius: 50px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
     
 }
 .link{

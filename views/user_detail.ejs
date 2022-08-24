@@ -1,6 +1,6 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-    <%- include('_header') -%>
+    <!-- <%- include('_header') -%> -->
 
         <body>
             <nav>
@@ -10,9 +10,14 @@
                 <a class="link2" href="/users">Users</a>
                 <a class="link2" href="/posts/create">+ New Post</a>
             </nav>
+            
             <h1>
-                <%= name %>
+                <%= user.name %>
             </h1>
+            <figure>
+                <%=user.coverImageUrl%>
+            </figure>
+            <figure><%=user.profileImageUrl%></figure>
         </body>
         <%- include('_footer') -%>
 
