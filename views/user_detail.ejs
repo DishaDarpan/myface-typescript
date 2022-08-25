@@ -23,12 +23,11 @@
             </div>
             <div class="container5">
                 <% user.posts.forEach(function(post){ %>
-                    <!-- <div class="sub-container5"> -->
-                    <img class="userimage" src="<%=post.imageUrl %>"/><br>
-                    <p><%=post.message %></p><br>
+                   <div class="subContainer5">
+                    <img class="userimage" src="<%=post.imageUrl %>"/>
+                    <p><%=post.message %></p>
                     <p><%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %></p>
-                    <!-- </div>  -->
-                   
+                   </div>
                <% }); %>
                        </div>
             
