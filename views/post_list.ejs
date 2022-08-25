@@ -4,6 +4,7 @@
 
         <body>
             <h1 class="headings">Posts</h1>
+            <button id="trybutton">Try me😜</button>
             <ul>
                 <div class="container2">
                 <% postList.results.forEach(function(post) {%>
@@ -11,7 +12,7 @@
                         <h3>
                             <%= post.postedBy.username %>
                         </h3>
-                        <img id="postImage" src="<%= post.imageUrl %>" alt="Image loading"  />
+                        <img class="postImage" src="<%= post.imageUrl %>" alt="Image loading"  />
                         <div class="container1">
                         <form method="post" action="/posts/<%=post.id %>/like/">
                             <button>Likes </button>

@@ -3,7 +3,7 @@
     color: rgba(197, 38, 38, 0.716);
     font-size: 30px;
     margin-top: 100px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     text-align: left;
 }
 h1{
@@ -42,7 +42,7 @@ a{
 }
 
 
-#postImage{
+.postImage{
     max-width: 250px;
     background: rgb(242, 228, 249);
     padding: 10px ;
@@ -172,8 +172,49 @@ nav{
 
  
 }
-@media only screen and (min-width:375px){
-    nav{
-        background-color:yellow;
+
+@media only screen and (max-width:821px){
+    #nav-link{
+        display: none;
     }
+    .link3{
+        display:flex;
+        flex-direction: column;
+        font-size: 20px;
+        align-items: flex-end;
+        justify-content: space-around;
+        font-family: 'Times New Roman', Times, serif;
+        color: white; 
+        margin-top:30px;
+        
+    }
+   
+    
 }
+@media only screen and(min-width:821px) {
+    #menu{
+        display:none;
+    }
+    
+}
+#trybutton{
+    background-image: linear-gradient(to right, #623bee 0%, #d0a0ff 51%, #e6d5fb 100%);    
+    /* transition:all is ease; */
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#menu{
+    display: flex;
+    padding:2.5px;
+    color:white;
+    position:fixed;
+    top:5px;
+    right:10px;
+    font-size: 20px;
+    z-index: 2;
+}
+
